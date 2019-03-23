@@ -1,1 +1,1 @@
-###### H6 YGOVirtualCardBinder
+###### YGOVirtualCardBinder
