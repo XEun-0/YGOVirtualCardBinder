@@ -155,6 +155,8 @@ namespace DigitalCardBinder.Mk3
                 //Form f = new Dialog("Error: \n[Select a Slot]");
                 //f.ShowDialog();
             }
+
+            addCardPicIn.Text = "";
         }
 
         private void Card_Click(object sender, EventArgs e)
