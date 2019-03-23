@@ -75,6 +75,103 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             }
         }
 
+        public Card GetCard(string type, string name)
+        {
+            try
+            {
+                string nm = name;
+                string pic = "";
+                string copies = "";
+                XmlDocument xd = new XmlDocument();
+                FileInfo[] fi = GetDatabasePages(type);
+                foreach(FileInfo ff in fi)
+                {
+                    FileStream file = new FileStream("database/" + type + "/" + ff.Name, FileMode.Open);
+                    xd.Load(file);
+                    XmlNodeList list = xd.GetElementsByTagName("Card");
+
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        XmlElement c1 = (XmlElement)xd.GetElementsByTagName("Slot")[i];
+                        XmlElement c2 = (XmlElement)xd.GetElementsByTagName("Card")[i];
+                        XmlElement c3 = (XmlElement)xd.GetElementsByTagName("Picture")[i];
+                        XmlElement c4 = (XmlElement)xd.GetElementsByTagName("Copies")[i];
+                        nm = c2.GetAttribute("Name");
+
+                        Console.WriteLine(Simplify(nm) + ", " + Simplify(name) + ", " + ff.Name);
+
+                        if (Simplify(nm).Equals(Simplify(name)))
+                        {
+                            pic = c3.InnerText;
+                            copies = "" + c4.InnerText;
+                            string pg = ff.Name.Substring(4);
+                            pg = pg.Remove(pg.IndexOf(".xml"));
+                            Console.WriteLine("Page: " + pg);
+                            file.Close();
+                            return new Card(type, pg, c1.InnerText, name, Simplify(name) + ".jpeg", copies, pic);
+                        }
+                    }
+                    file.Close();
+                }
+                return new Card("NA");
+            }
+            catch (IOException e)
+            {
+                e.ToString();
+                //Console.WriteLine("BAKKAKAKAKAKA");
+                return new Card("NA");
+            }
+        }
+
+        public List<Card> GetCardsMatchingName(string iname, string type)
+        {
+            List<Card> c = new List<Card>();
+            try
+            {
+                XmlDocument xd = new XmlDocument();
+
+                foreach (FileInfo f in GetDatabasePages(type))
+                {
+                    FileStream file = new FileStream(f.DirectoryName + "/" + f.Name, FileMode.Open);
+                    xd.Load(file);
+                    XmlNodeList list = xd.GetElementsByTagName("Card");
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        XmlElement c1 = (XmlElement)xd.GetElementsByTagName("Slot")[i];
+                        XmlElement c2 = (XmlElement)xd.GetElementsByTagName("Card")[i];
+                        XmlElement c3 = (XmlElement)xd.GetElementsByTagName("Picture")[i];
+                        XmlElement c4 = (XmlElement)xd.GetElementsByTagName("Copies")[i];
+                        //string page = f.Name.Substring(f.Name.Length - 5);
+
+                        string page = f.Name.Remove(f.Name.IndexOf(".xml"));
+                        page = page.Substring(page.IndexOf("page") + 4);
+                        if(Simplify(c2.GetAttribute("Name")).Contains(Simplify(iname)))
+                        {
+                            Card temp = new Card(
+                            type,
+                            page,
+                            c1.InnerText,
+                            c2.GetAttribute("Name"),
+                            c3.InnerText,
+                            c4.InnerText,
+                            ""
+                            );
+                            //Console.WriteLine(temp.Name);
+                            c.Add(temp);
+                        }
+                    }
+                    //Console.WriteLine(file.Name);
+                    file.Close();
+                }
+                return c;
+            }
+            catch (IOException e)
+            {
+                e.ToString();
+                return new List<Card> { }; ;
+            }
+        }
+        
         public void AddCard(Card card)
         {
             bool cardExist = CardExists(card);
@@ -272,6 +369,12 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             string name = s.ToLower();
             name = new string(name.Select(c => char.IsPunctuation(c) ? '/' : c).ToArray());
             name = name.Replace("/", " ");
+
+            //Console.WriteLine("BE" + name.Substring(0, 1) + "END");
+            if(name.Substring(0,1).Equals(" "))
+            {
+                name = name.Substring(1);
+            }
 
             return name;
         }

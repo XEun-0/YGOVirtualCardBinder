@@ -9,7 +9,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
 {
     class PageDatabaseManagement
     {
-        public int getPageNum(string path)
+        public int GetPageNum(string path)
         {
             DirectoryInfo d = new DirectoryInfo("database/" + path + "/");
             FileInfo[] f = d.GetFiles("*.xml");

@@ -13,15 +13,15 @@ namespace DigitalCardBinder.Mk3.ComponentHandlers
         private int X = 0;
         private int Y = 0;
 
-        public Control getComponent(Control sender, int x, int y)
+        public Control GetComponent(Control sender, int x, int y)
         {
             p = (Panel)sender.Parent;
             X = x;
             Y = y;
-            return containsLocation(p);
+            return ContainsLocation(p);
         }
 
-        private Control containsLocation(Panel p)
+        private Control ContainsLocation(Control p)
         {
             foreach(Control c in p.Controls)
             {

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DigitalCardBinder.Mk3.Components
 {
-    public struct Card
+    public class Card
     {
+        enum Data { name, page, picture, slot, copies, pictureLink };
         private string name;
         private string page;
         private string picture;
@@ -21,14 +22,9 @@ namespace DigitalCardBinder.Mk3.Components
 
         public Card(int i, string islot, string ipage)
         {
-            name = "";
-            page = ipage;
-            picture = "";
-            slot = islot;
-            copies = "";
-            pictureLink = "";
-            type = "";
             count = i;
+            slot = islot;
+            page = ipage;
         }
 
         public Card(string itype, string ipage, string islot, string iname, string ipicture, string icopies, string ipicLink)
@@ -46,14 +42,8 @@ namespace DigitalCardBinder.Mk3.Components
         //Placeholder Card for switching
         public Card(string islot)
         {
-            name = "";
-            page = "";
-            picture = "";
-            slot = islot;
-            copies = "";
-            pictureLink = "";
-            type = "";
             count = 0;
+            slot = islot;
         }
 
         //Similar to an Array's Add method.

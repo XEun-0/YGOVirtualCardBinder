@@ -100,7 +100,7 @@ namespace DigitalCardBinder.Mk3
             this.panelDC = new System.Windows.Forms.Panel();
             this.panelC = new System.Windows.Forms.GroupBox();
             this.CheckAll = new System.Windows.Forms.CheckBox();
-            this.searchCardCB = new System.Windows.Forms.ComboBox();
+            this.searchCardCB = new System.Windows.Forms.Label();
             this.searchCardCBLabel = new System.Windows.Forms.Label();
             this.searchCardNameLabel = new System.Windows.Forms.Label();
             this.searchCardName = new System.Windows.Forms.TextBox();
@@ -109,6 +109,7 @@ namespace DigitalCardBinder.Mk3
             this.SearchCardView = new System.Windows.Forms.ListView();
             this.currentPageLabel = new MetroFramework.Controls.MetroLabel();
             this.cardCollectionView = new System.Windows.Forms.Panel();
+            this.changePictureIcon = new System.Windows.Forms.PictureBox();
             this.trashIcon = new System.Windows.Forms.PictureBox();
             this.PageNavPanel = new System.Windows.Forms.Panel();
             this.GOTO_TEXTBOX = new MetroFramework.Controls.MetroTextBox();
@@ -150,6 +151,7 @@ namespace DigitalCardBinder.Mk3
             this.panelC.SuspendLayout();
             this.showSearchPanel.SuspendLayout();
             this.cardCollectionView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.changePictureIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trashIcon)).BeginInit();
             this.PageNavPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seeCard)).BeginInit();
@@ -780,14 +782,14 @@ namespace DigitalCardBinder.Mk3
             // ControlPanelCollection
             // 
             this.ControlPanelCollection.BackColor = System.Drawing.Color.YellowGreen;
-            this.ControlPanelCollection.Controls.Add(this.EButton);
-            this.ControlPanelCollection.Controls.Add(this.panelDE);
             this.ControlPanelCollection.Controls.Add(this.AButton);
             this.ControlPanelCollection.Controls.Add(this.panelDA);
             this.ControlPanelCollection.Controls.Add(this.BButton);
             this.ControlPanelCollection.Controls.Add(this.panelDB);
             this.ControlPanelCollection.Controls.Add(this.CButton);
             this.ControlPanelCollection.Controls.Add(this.panelDC);
+            this.ControlPanelCollection.Controls.Add(this.EButton);
+            this.ControlPanelCollection.Controls.Add(this.panelDE);
             this.ControlPanelCollection.Controls.Add(this.showSearchPanel);
             this.ControlPanelCollection.Location = new System.Drawing.Point(697, -2);
             this.ControlPanelCollection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -799,7 +801,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.EButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.EButton.CustomBackground = true;
-            this.EButton.Location = new System.Drawing.Point(0, 626);
+            this.EButton.Location = new System.Drawing.Point(0, 257);
             this.EButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EButton.Name = "EButton";
             this.EButton.Size = new System.Drawing.Size(309, 69);
@@ -810,10 +812,10 @@ namespace DigitalCardBinder.Mk3
             // panelDE
             // 
             this.panelDE.Controls.Add(this.panelE);
-            this.panelDE.Location = new System.Drawing.Point(0, 628);
+            this.panelDE.Location = new System.Drawing.Point(0, 257);
             this.panelDE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDE.Name = "panelDE";
-            this.panelDE.Size = new System.Drawing.Size(309, 67);
+            this.panelDE.Size = new System.Drawing.Size(309, 71);
             this.panelDE.TabIndex = 14;
             // 
             // panelE
@@ -822,7 +824,7 @@ namespace DigitalCardBinder.Mk3
             this.panelE.Controls.Add(this.addTypeFolder);
             this.panelE.Controls.Add(this.label12);
             this.panelE.Controls.Add(this.addTypeText);
-            this.panelE.Location = new System.Drawing.Point(4, 7);
+            this.panelE.Location = new System.Drawing.Point(4, 74);
             this.panelE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelE.Name = "panelE";
             this.panelE.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -839,7 +841,7 @@ namespace DigitalCardBinder.Mk3
             this.addTypeFolder.TabIndex = 2;
             this.addTypeFolder.Text = "Add";
             this.addTypeFolder.UseVisualStyleBackColor = true;
-            this.addTypeFolder.Click += new System.EventHandler(this.Button1_Click);
+            this.addTypeFolder.Click += new System.EventHandler(this.AddTypeFolder_Click);
             // 
             // label12
             // 
@@ -898,7 +900,7 @@ namespace DigitalCardBinder.Mk3
             this.panelDB.Location = new System.Drawing.Point(0, 94);
             this.panelDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDB.Name = "panelDB";
-            this.panelDB.Size = new System.Drawing.Size(309, 69);
+            this.panelDB.Size = new System.Drawing.Size(309, 67);
             this.panelDB.TabIndex = 8;
             // 
             // panelB
@@ -965,7 +967,7 @@ namespace DigitalCardBinder.Mk3
             this.panelDC.Location = new System.Drawing.Point(0, 175);
             this.panelDC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDC.Name = "panelDC";
-            this.panelDC.Size = new System.Drawing.Size(309, 66);
+            this.panelDC.Size = new System.Drawing.Size(309, 67);
             this.panelDC.TabIndex = 9;
             // 
             // panelC
@@ -998,12 +1000,16 @@ namespace DigitalCardBinder.Mk3
             // 
             // searchCardCB
             // 
-            this.searchCardCB.FormattingEnabled = true;
+            this.searchCardCB.BackColor = System.Drawing.Color.White;
+            this.searchCardCB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchCardCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchCardCB.Location = new System.Drawing.Point(88, 55);
             this.searchCardCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchCardCB.Name = "searchCardCB";
             this.searchCardCB.Size = new System.Drawing.Size(107, 24);
             this.searchCardCB.TabIndex = 4;
+            this.searchCardCB.Text = "temp";
+            this.searchCardCB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // searchCardCBLabel
             // 
@@ -1039,11 +1045,12 @@ namespace DigitalCardBinder.Mk3
             this.searchButton.Size = new System.Drawing.Size(271, 69);
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search Card";
+            this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // showSearchPanel
             // 
             this.showSearchPanel.Controls.Add(this.SearchCardView);
-            this.showSearchPanel.Location = new System.Drawing.Point(0, 250);
+            this.showSearchPanel.Location = new System.Drawing.Point(0, 331);
             this.showSearchPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showSearchPanel.Name = "showSearchPanel";
             this.showSearchPanel.Size = new System.Drawing.Size(309, 367);
@@ -1063,6 +1070,7 @@ namespace DigitalCardBinder.Mk3
             this.SearchCardView.TileSize = new System.Drawing.Size(228, 170);
             this.SearchCardView.UseCompatibleStateImageBehavior = false;
             this.SearchCardView.View = System.Windows.Forms.View.Tile;
+            this.SearchCardView.SelectedIndexChanged += new System.EventHandler(this.SearchCardView_SelectedIndexChanged);
             // 
             // currentPageLabel
             // 
@@ -1079,6 +1087,7 @@ namespace DigitalCardBinder.Mk3
             // cardCollectionView
             // 
             this.cardCollectionView.BackColor = System.Drawing.Color.Gray;
+            this.cardCollectionView.Controls.Add(this.changePictureIcon);
             this.cardCollectionView.Controls.Add(this.trashIcon);
             this.cardCollectionView.Controls.Add(this.PageNavPanel);
             this.cardCollectionView.Controls.Add(this.RightPage);
@@ -1101,6 +1110,17 @@ namespace DigitalCardBinder.Mk3
             this.cardCollectionView.TabIndex = 19;
             this.cardCollectionView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Card_MouseMove);
             // 
+            // changePictureIcon
+            // 
+            this.changePictureIcon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.changePictureIcon.Image = global::DigitalCardBinder.Mk3.Properties.Resources.changePicture;
+            this.changePictureIcon.Location = new System.Drawing.Point(443, 491);
+            this.changePictureIcon.Name = "changePictureIcon";
+            this.changePictureIcon.Size = new System.Drawing.Size(46, 46);
+            this.changePictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.changePictureIcon.TabIndex = 18;
+            this.changePictureIcon.TabStop = false;
+            // 
             // trashIcon
             // 
             this.trashIcon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -1120,7 +1140,7 @@ namespace DigitalCardBinder.Mk3
             this.PageNavPanel.Controls.Add(this.currentPageLabel);
             this.PageNavPanel.Controls.Add(this.MAX_PAGE_LABEL);
             this.PageNavPanel.Controls.Add(this.t_SLASH);
-            this.PageNavPanel.Location = new System.Drawing.Point(191, 491);
+            this.PageNavPanel.Location = new System.Drawing.Point(83, 491);
             this.PageNavPanel.Name = "PageNavPanel";
             this.PageNavPanel.Size = new System.Drawing.Size(265, 46);
             this.PageNavPanel.TabIndex = 16;
@@ -1141,6 +1161,7 @@ namespace DigitalCardBinder.Mk3
             this.GOTO_BUTTON.Size = new System.Drawing.Size(55, 25);
             this.GOTO_BUTTON.TabIndex = 14;
             this.GOTO_BUTTON.Text = "Goto";
+            this.GOTO_BUTTON.Click += new System.EventHandler(this.GOTO_BUTTON_Click);
             // 
             // MAX_PAGE_LABEL
             // 
@@ -1148,7 +1169,7 @@ namespace DigitalCardBinder.Mk3
             this.MAX_PAGE_LABEL.CustomBackground = true;
             this.MAX_PAGE_LABEL.CustomForeColor = true;
             this.MAX_PAGE_LABEL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MAX_PAGE_LABEL.Location = new System.Drawing.Point(221, 13);
+            this.MAX_PAGE_LABEL.Location = new System.Drawing.Point(225, 13);
             this.MAX_PAGE_LABEL.Name = "MAX_PAGE_LABEL";
             this.MAX_PAGE_LABEL.Size = new System.Drawing.Size(17, 20);
             this.MAX_PAGE_LABEL.TabIndex = 12;
@@ -1160,7 +1181,7 @@ namespace DigitalCardBinder.Mk3
             this.t_SLASH.CustomBackground = true;
             this.t_SLASH.CustomForeColor = true;
             this.t_SLASH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.t_SLASH.Location = new System.Drawing.Point(194, 13);
+            this.t_SLASH.Location = new System.Drawing.Point(199, 13);
             this.t_SLASH.Name = "t_SLASH";
             this.t_SLASH.Size = new System.Drawing.Size(14, 20);
             this.t_SLASH.TabIndex = 13;
@@ -1261,6 +1282,7 @@ namespace DigitalCardBinder.Mk3
             this.showSearchPanel.ResumeLayout(false);
             this.cardCollectionView.ResumeLayout(false);
             this.cardCollectionView.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.changePictureIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trashIcon)).EndInit();
             this.PageNavPanel.ResumeLayout(false);
             this.PageNavPanel.PerformLayout();
@@ -1337,7 +1359,7 @@ namespace DigitalCardBinder.Mk3
         private Panel panelDC;
         private MetroFramework.Controls.MetroTile CButton;
         private GroupBox panelC;
-        private ComboBox searchCardCB;
+        private Label searchCardCB;
         private Label searchCardCBLabel;
         private Label searchCardNameLabel;
         private TextBox searchCardName;
@@ -1361,6 +1383,7 @@ namespace DigitalCardBinder.Mk3
         private System.ComponentModel.BackgroundWorker bgWorker;
         private Panel PageNavPanel;
         private PictureBox trashIcon;
+        private PictureBox changePictureIcon;
     }
 }
 

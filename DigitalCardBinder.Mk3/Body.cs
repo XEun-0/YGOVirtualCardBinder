@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -17,15 +18,11 @@ using System.Windows.Forms;
 using VisualEffects;
 using VisualEffects.Animations.Effects;
 using VisualEffects.Easing;
-//using VisualEffects;
-//using VisualEffects.Animations.Effects;
-//using VisualEffects.Easing;
 
 namespace DigitalCardBinder.Mk3
 {
     public partial class Body : MetroForm
     {
-
         //Database Handlers
         static CardDatabaseManagement cdm = new CardDatabaseManagement();
         static PageDatabaseManagement pdm = new PageDatabaseManagement();
@@ -43,14 +40,14 @@ namespace DigitalCardBinder.Mk3
 
         //Utility Variables
         private Boolean MoveSelected = false;
-        private static Card swapCard = new Card();
+        private static Card swapCard = null;
 
         private static CancellationTokenSource tokenSource;
 
         //Navigation Variables
         private static Card SelectedCard;
         private PictureBox SelectedSlot = null;
-        private int currentPage = 1;
+        private static int currentPage = 1;
 
         //Drop Panel Variables
         //DropPanelThings
@@ -72,8 +69,9 @@ namespace DigitalCardBinder.Mk3
             addCardPageText.Text = "" + currentPage;
             addPageCB.Text = (string)currentType.SelectedItem;
 
-            //Setup Trash Function
+            //Setup Function Icons
             trashIcon.Visible = false;
+            changePictureIcon.Visible = false;
 
             //DropPanel things
             hideHeight = panelDA.Height;
@@ -102,7 +100,7 @@ namespace DigitalCardBinder.Mk3
                 {
                     template = new Card(0, SelectedSlot.Name, ""+ currentPage);
                 }
-                
+                //Console.WriteLine("BEG" + cdm.Simplify(addCardNameIn.Text) + ".jpeg");
                 if (!cdm.CardExists(template))
                 {
                     if (!cdm.CardExistsInSlot(SelectedSlot.Name, (string)currentType.SelectedItem, currentPage))
@@ -123,7 +121,7 @@ namespace DigitalCardBinder.Mk3
 
                         Card cc = cdm.GetCard((string)currentType.SelectedItem, SelectedSlot.Name, currentPage + "");
                         //Console.WriteLine(cc.Count);
-                        if(cc.Count != 1)
+                        if (cc.Count != 1)
                         {
                             foreach (Panel c in cardCollectionView.Controls.OfType<Panel>())
                                 foreach (PictureBox pb in c.Controls.OfType<PictureBox>())
@@ -241,12 +239,12 @@ namespace DigitalCardBinder.Mk3
         private void PopulateDisplay()
         {
             //Console.WriteLine(currentType.SelectedValue + " BREAK 1");
-            foreach (Panel c in cardCollectionView.Controls.OfType<Panel>()) { 
+            foreach (Panel c in cardCollectionView.Controls.OfType<Panel>()) {
                 //Console.WriteLine(currentType.SelectedValue + " BREAK 2");
                 foreach (PictureBox pb in c.Controls.OfType<PictureBox>())
                 {
                     Card s = cdm.GetCard((string)currentType.SelectedItem, pb.Name, currentPage + "");
-
+                    //Console.WriteLine("PAFEFEFEFEFE " + currentPage);
                     if (s.Count > 2)
                     {
                         //Console.WriteLine("database/" + (string)currentType.SelectedItem + "/images/" + s.Picture);
@@ -258,7 +256,7 @@ namespace DigitalCardBinder.Mk3
                     }
                 }
             }
-            MAX_PAGE_LABEL.Text = "" + pdm.getPageNum((string)currentType.SelectedItem);
+            MAX_PAGE_LABEL.Text = "" + pdm.GetPageNum((string)currentType.SelectedItem);
             currentPageLabel.Text = "Page: " + currentPage;
             GC.Collect();
         }
@@ -334,17 +332,17 @@ namespace DigitalCardBinder.Mk3
             //if GhostCard is clicked on the right component, erase it and fill it
             try
             {
-                if (panelHandler.getComponent(pb, mx, my) == turnPageR)
+                if (panelHandler.GetComponent(pb, mx, my) == turnPageR)
                 {
                     //Console.WriteLine(panelHandler.getComponent(pb, mx, my).Name);
                     TurnPageR_Click(null, null);
                 }
-                else if (panelHandler.getComponent(pb, mx, my) == turnPageL)
+                else if (panelHandler.GetComponent(pb, mx, my) == turnPageL)
                 {
                     //Console.WriteLine(panelHandler.getComponent(pb, mx, my).Name);
                     TurnPageL_Click(null, null);
                 }
-                else if (panelHandler.getComponent(pb, mx, my) == trashIcon)
+                else if (panelHandler.GetComponent(pb, mx, my) == trashIcon)
                 {
                     //Console.WriteLine("BOORYT;JKF;D");
                     if(trashIcon.Visible ==  true)
@@ -358,10 +356,26 @@ namespace DigitalCardBinder.Mk3
                         DisposeGhostCard();
                     }
                 }
-                else if (panelHandler.getComponent(pb, mx, my).GetType() == typeof(PictureBox))
+                else if (panelHandler.GetComponent(pb, mx, my) == changePictureIcon)
+                {
+                    Console.WriteLine("database\\" + swapCard.Type + "\\images\\" + swapCard.Picture);
+                    if (changePictureIcon.Visible == true)
+                    {
+                        //cdm.RemoveCard(swapCard, (string)currentType.SelectedItem);
+                        Process.Start("database\\" + swapCard.Type + "\\images\\");
+                        //cdm.RemoveCard(swapCard, (string)currentType.SelectedItem);
+                        DisposeGhostCard();
+                        PopulateDisplay();
+                    }
+                    else
+                    {
+                        DisposeGhostCard();
+                    }
+                }
+                else if (panelHandler.GetComponent(pb, mx, my).GetType() == typeof(PictureBox))
                 {
                     
-                    Control c = panelHandler.getComponent(pb, mx, my);
+                    Control c = panelHandler.GetComponent(pb, mx, my);
                     //Console.WriteLine("Slot: " + c.Name + ", Page: " + currentPage);
                     Card destinationCard = cdm.GetCard((string)currentType.SelectedItem, c.Name, currentPage + "");
                     //Console.WriteLine("c1: " + swapCard.Count + ", c2: " + destinationCard.Count);
@@ -386,6 +400,7 @@ namespace DigitalCardBinder.Mk3
             UpdateCardCollectionState(null);
             MoveSelected = false;
             trashIcon.Visible = false;
+            changePictureIcon.Visible = false;
         }
 
         private void Card_MouseMove(object sender, MouseEventArgs e)
@@ -432,6 +447,7 @@ namespace DigitalCardBinder.Mk3
             ghostCard.Image = p.Image;
 
             trashIcon.Visible = true;
+            changePictureIcon.Visible = true;
 
             return ghostCard;
         }
@@ -492,7 +508,7 @@ namespace DigitalCardBinder.Mk3
 
         private void TurnPageR_Click(object sender, EventArgs e)
         {
-            if(currentPage < pdm.getPageNum((string)currentType.SelectedItem))
+            if(currentPage < pdm.GetPageNum((string)currentType.SelectedItem))
                 currentPage++;
             PopulateDisplay();
             ResetDisplay();
@@ -513,6 +529,7 @@ namespace DigitalCardBinder.Mk3
             this.ActiveControl = cardCollectionView;
             addCardTypeIn.Text = (string)currentType.SelectedItem;
             addPageCB.Text = (string)currentType.SelectedItem;
+            searchCardCB.Text = (string)currentType.SelectedItem;
 
             //UpdateMaxPageLabel();
 
@@ -526,6 +543,7 @@ namespace DigitalCardBinder.Mk3
 
         private void DropPanel_Click(object sender, EventArgs e)
         {
+            //bool comp = false;
             //updateCB();
             Button b = (Button)sender;
             foreach (Panel gb in ControlPanelCollection.Controls.OfType<Panel>().Where(gb => gb.Name.StartsWith("panelD")))
@@ -538,7 +556,6 @@ namespace DigitalCardBinder.Mk3
                     int maxheight = hideHeight;
                     if ("panelD" + b.Name.Substring(0, 1) == gb.Name)
                     {
-                        
                         foreach (GroupBox p in gb.Controls)
                         {
                             if (p.Name == "panel" + b.Name.Substring(0, 1))
@@ -547,8 +564,8 @@ namespace DigitalCardBinder.Mk3
                             }
                         }
                         dropped = gb;
-                        gb.Animate(new TopAnchoredHeightEffect(), EasingFunctions.Linear, maxheight + 4, 500, 0);
                         
+                        gb.Animate(new TopAnchoredHeightEffect(), EasingFunctions.Linear, maxheight + 4, 500, 0);
                     }
                     else
                     {
@@ -597,12 +614,110 @@ namespace DigitalCardBinder.Mk3
 
         private void UpdateMaxPageLabel()
         {
-            MAX_PAGE_LABEL.Text = "" + pdm.getPageNum((string)currentType.SelectedItem);
+            MAX_PAGE_LABEL.Text = "" + pdm.GetPageNum((string)currentType.SelectedItem);
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void SearchButton_Click(object sender, EventArgs e)
         {
-            //Console.WriteLine(cdm.Simplify(addTypeText.Text));
+            List<Card> cList = new List<Card>();
+            if(searchCardName.Text != "")
+            {
+                if (CheckAll.Checked)
+                {
+                    foreach (DirectoryInfo f in cdm.GetDatabasePages())
+                    {
+                        var i = cdm.GetCardsMatchingName(searchCardName.Text, f.Name);
+                        foreach(Card cc in i)
+                        {
+                            cList.Add(cc);
+                        }
+                    }
+                }
+                else
+                {
+                    cList = cdm.GetCardsMatchingName(searchCardName.Text, (string)currentType.SelectedItem);
+                }
+
+                DropPanel_Click(sender, null);
+            }
+            SetupListView(cList);      
+        }
+
+        void SetupListView(List<Card> s)
+        {
+            SearchCardView.Clear();
+
+            ImageList il = new ImageList();
+
+            foreach (Card c in s)
+            {
+                Image im = Image.FromFile("database/" + c.Type + "/images/" + c.Picture);
+                il.Images.Add(im);
+            }
+
+            il.ImageSize = new Size(110, 170);
+            int count = 0;
+            SearchCardView.LargeImageList = il;
+
+            foreach (Card c in s)
+            {
+                ListViewItem l = new ListViewItem
+                {
+                    Text = c.Name,
+                    Tag = c.Type,
+                    ImageIndex = count++
+                };
+                SearchCardView.Items.Add(l);
+            }
+        }
+
+        private void SearchCardView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SearchCardView.SelectedIndices.Count > 0)
+            {
+                //Console.WriteLine();
+                int i = SearchCardView.SelectedIndices[0];
+                //var card = cdm.GetCard(SearchCardView.SelectedItems[0].Text, (string)SearchCardView.SelectedItems[0].Tag);
+
+                Console.WriteLine((string)SearchCardView.SelectedItems[0].Tag + ", " + SearchCardView.SelectedItems[0].Text);
+                //type slot page
+                var card = cdm.GetCard((string)SearchCardView.SelectedItems[0].Tag, SearchCardView.SelectedItems[0].Text);
+                if(card.Slot != "NA")
+                {
+                    Console.WriteLine(card.Type + ", " + card.Slot + ", PAGE: " + card.Page + ", NAME: " + card.Name);
+                    //currentPage = card.Page;
+                }
+                currentType.SelectedItem = (string)SearchCardView.SelectedItems[0].Tag;
+                currentPage = card.Page;
+                PopulateDisplay();
+                foreach (Panel c in cardCollectionView.Controls.OfType<Panel>())
+                    foreach (PictureBox pb in c.Controls.OfType<PictureBox>())
+                        if (pb.Name == card.Slot)
+                            Card_Click(pb, null);
+            }
+
+            
+
+            SearchCardView.Clear();
+        }
+
+        private void GOTO_BUTTON_Click(object sender, EventArgs e)
+        {
+            if (int.Parse(GOTO_TEXTBOX.Text) <= pdm.GetPageNum((string)currentType.SelectedItem))
+            {
+                currentPage = int.Parse(GOTO_TEXTBOX.Text);
+                PopulateDisplay();
+                ResetDisplay();
+                addCardPageText.Text = "" + currentPage;
+            }
+        }
+
+        private void AddTypeFolder_Click(object sender, EventArgs e)
+        {
+            ddm.AddCardType(addTypeText.Text);
+            //bindList(addPageCB, dbm.refreshCombobox());
+            BindList(currentType, ddm.RefreshCombobox());
+            //BindList(searchCardCB, ddm.refreshCombobox());
         }
     }
 }
