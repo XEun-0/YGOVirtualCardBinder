@@ -171,9 +171,9 @@ namespace DigitalCardBinder.Mk3
             this.RightPage.Controls.Add(this.A5);
             this.RightPage.Controls.Add(this.A4);
             this.RightPage.Location = new System.Drawing.Point(254, 31);
-            this.RightPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RightPage.Margin = new System.Windows.Forms.Padding(2);
             this.RightPage.Name = "RightPage";
-            this.RightPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RightPage.Padding = new System.Windows.Forms.Padding(2);
             this.RightPage.Size = new System.Drawing.Size(225, 362);
             this.RightPage.TabIndex = 1;
             this.RightPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Card_MouseMove);
@@ -183,7 +183,7 @@ namespace DigitalCardBinder.Mk3
             this.C6.BackColor = System.Drawing.Color.Silver;
             this.C6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C6.Location = new System.Drawing.Point(158, 251);
-            this.C6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.C6.Margin = new System.Windows.Forms.Padding(2);
             this.C6.Name = "C6";
             this.C6.Size = new System.Drawing.Size(64, 93);
             this.C6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +196,7 @@ namespace DigitalCardBinder.Mk3
             this.C5.BackColor = System.Drawing.Color.Silver;
             this.C5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C5.Location = new System.Drawing.Point(81, 251);
-            this.C5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.C5.Margin = new System.Windows.Forms.Padding(2);
             this.C5.Name = "C5";
             this.C5.Size = new System.Drawing.Size(64, 93);
             this.C5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -209,7 +209,7 @@ namespace DigitalCardBinder.Mk3
             this.C4.BackColor = System.Drawing.Color.Silver;
             this.C4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C4.Location = new System.Drawing.Point(4, 251);
-            this.C4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.C4.Margin = new System.Windows.Forms.Padding(2);
             this.C4.Name = "C4";
             this.C4.Size = new System.Drawing.Size(64, 93);
             this.C4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,7 +222,7 @@ namespace DigitalCardBinder.Mk3
             this.B6.BackColor = System.Drawing.Color.Silver;
             this.B6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B6.Location = new System.Drawing.Point(158, 133);
-            this.B6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.B6.Margin = new System.Windows.Forms.Padding(2);
             this.B6.Name = "B6";
             this.B6.Size = new System.Drawing.Size(64, 95);
             this.B6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -235,7 +235,7 @@ namespace DigitalCardBinder.Mk3
             this.B5.BackColor = System.Drawing.Color.Silver;
             this.B5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B5.Location = new System.Drawing.Point(81, 133);
-            this.B5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.B5.Margin = new System.Windows.Forms.Padding(2);
             this.B5.Name = "B5";
             this.B5.Size = new System.Drawing.Size(64, 95);
             this.B5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +248,7 @@ namespace DigitalCardBinder.Mk3
             this.B4.BackColor = System.Drawing.Color.Silver;
             this.B4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B4.Location = new System.Drawing.Point(4, 133);
-            this.B4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.B4.Margin = new System.Windows.Forms.Padding(2);
             this.B4.Name = "B4";
             this.B4.Size = new System.Drawing.Size(64, 95);
             this.B4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -261,7 +261,7 @@ namespace DigitalCardBinder.Mk3
             this.A6.BackColor = System.Drawing.Color.Silver;
             this.A6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.A6.Location = new System.Drawing.Point(158, 15);
-            this.A6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A6.Margin = new System.Windows.Forms.Padding(2);
             this.A6.Name = "A6";
             this.A6.Size = new System.Drawing.Size(64, 95);
             this.A6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -274,7 +274,7 @@ namespace DigitalCardBinder.Mk3
             this.A5.BackColor = System.Drawing.Color.Silver;
             this.A5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.A5.Location = new System.Drawing.Point(81, 15);
-            this.A5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A5.Margin = new System.Windows.Forms.Padding(2);
             this.A5.Name = "A5";
             this.A5.Size = new System.Drawing.Size(64, 95);
             this.A5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -287,7 +287,7 @@ namespace DigitalCardBinder.Mk3
             this.A4.BackColor = System.Drawing.Color.Silver;
             this.A4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.A4.Location = new System.Drawing.Point(4, 15);
-            this.A4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A4.Margin = new System.Windows.Forms.Padding(2);
             this.A4.Name = "A4";
             this.A4.Size = new System.Drawing.Size(64, 95);
             this.A4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -308,9 +308,9 @@ namespace DigitalCardBinder.Mk3
             this.LeftPage.Controls.Add(this.A3);
             this.LeftPage.Controls.Add(this.B1);
             this.LeftPage.Location = new System.Drawing.Point(10, 31);
-            this.LeftPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LeftPage.Margin = new System.Windows.Forms.Padding(2);
             this.LeftPage.Name = "LeftPage";
-            this.LeftPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LeftPage.Padding = new System.Windows.Forms.Padding(2);
             this.LeftPage.Size = new System.Drawing.Size(225, 362);
             this.LeftPage.TabIndex = 0;
             this.LeftPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Card_MouseMove);
@@ -320,7 +320,7 @@ namespace DigitalCardBinder.Mk3
             this.C3.BackColor = System.Drawing.Color.Silver;
             this.C3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C3.Location = new System.Drawing.Point(158, 251);
-            this.C3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.C3.Margin = new System.Windows.Forms.Padding(2);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(64, 93);
             this.C3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -333,7 +333,7 @@ namespace DigitalCardBinder.Mk3
             this.B2.BackColor = System.Drawing.Color.Silver;
             this.B2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B2.Location = new System.Drawing.Point(80, 133);
-            this.B2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.B2.Margin = new System.Windows.Forms.Padding(2);
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(64, 95);
             this.B2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -346,7 +346,7 @@ namespace DigitalCardBinder.Mk3
             this.C2.BackColor = System.Drawing.Color.Silver;
             this.C2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C2.Location = new System.Drawing.Point(80, 251);
-            this.C2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.C2.Margin = new System.Windows.Forms.Padding(2);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(64, 93);
             this.C2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -360,7 +360,7 @@ namespace DigitalCardBinder.Mk3
             this.A1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.A1.InitialImage = null;
             this.A1.Location = new System.Drawing.Point(3, 15);
-            this.A1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A1.Margin = new System.Windows.Forms.Padding(2);
             this.A1.Name = "A1";
             this.A1.Size = new System.Drawing.Size(64, 94);
             this.A1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,7 +373,7 @@ namespace DigitalCardBinder.Mk3
             this.B3.BackColor = System.Drawing.Color.Silver;
             this.B3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B3.Location = new System.Drawing.Point(158, 133);
-            this.B3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.B3.Margin = new System.Windows.Forms.Padding(2);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(64, 95);
             this.B3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -386,7 +386,7 @@ namespace DigitalCardBinder.Mk3
             this.C1.BackColor = System.Drawing.Color.Silver;
             this.C1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C1.Location = new System.Drawing.Point(3, 251);
-            this.C1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.C1.Margin = new System.Windows.Forms.Padding(2);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(64, 93);
             this.C1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -399,7 +399,7 @@ namespace DigitalCardBinder.Mk3
             this.A2.BackColor = System.Drawing.Color.Silver;
             this.A2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.A2.Location = new System.Drawing.Point(80, 15);
-            this.A2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A2.Margin = new System.Windows.Forms.Padding(2);
             this.A2.Name = "A2";
             this.A2.Size = new System.Drawing.Size(64, 95);
             this.A2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -412,7 +412,7 @@ namespace DigitalCardBinder.Mk3
             this.A3.BackColor = System.Drawing.Color.Silver;
             this.A3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.A3.Location = new System.Drawing.Point(158, 15);
-            this.A3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A3.Margin = new System.Windows.Forms.Padding(2);
             this.A3.Name = "A3";
             this.A3.Size = new System.Drawing.Size(64, 95);
             this.A3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -425,7 +425,7 @@ namespace DigitalCardBinder.Mk3
             this.B1.BackColor = System.Drawing.Color.Silver;
             this.B1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B1.Location = new System.Drawing.Point(3, 133);
-            this.B1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.B1.Margin = new System.Windows.Forms.Padding(2);
             this.B1.Name = "B1";
             this.B1.Size = new System.Drawing.Size(64, 95);
             this.B1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -553,7 +553,7 @@ namespace DigitalCardBinder.Mk3
             // turnPageR
             // 
             this.turnPageR.Location = new System.Drawing.Point(434, 399);
-            this.turnPageR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.turnPageR.Margin = new System.Windows.Forms.Padding(2);
             this.turnPageR.Name = "turnPageR";
             this.turnPageR.Size = new System.Drawing.Size(45, 37);
             this.turnPageR.TabIndex = 5;
@@ -563,7 +563,7 @@ namespace DigitalCardBinder.Mk3
             // turnPageL
             // 
             this.turnPageL.Location = new System.Drawing.Point(10, 399);
-            this.turnPageL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.turnPageL.Margin = new System.Windows.Forms.Padding(2);
             this.turnPageL.Name = "turnPageL";
             this.turnPageL.Size = new System.Drawing.Size(45, 37);
             this.turnPageL.TabIndex = 6;
@@ -587,9 +587,9 @@ namespace DigitalCardBinder.Mk3
             this.panelA.Controls.Add(this.addCardNameIn);
             this.panelA.Controls.Add(this.addCardButton);
             this.panelA.Location = new System.Drawing.Point(4, 59);
-            this.panelA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelA.Margin = new System.Windows.Forms.Padding(2);
             this.panelA.Name = "panelA";
-            this.panelA.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelA.Padding = new System.Windows.Forms.Padding(2);
             this.panelA.Size = new System.Drawing.Size(224, 236);
             this.panelA.TabIndex = 6;
             this.panelA.TabStop = false;
@@ -597,7 +597,7 @@ namespace DigitalCardBinder.Mk3
             // addCardCopiesIn
             // 
             this.addCardCopiesIn.Location = new System.Drawing.Point(187, 106);
-            this.addCardCopiesIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCardCopiesIn.Margin = new System.Windows.Forms.Padding(2);
             this.addCardCopiesIn.Name = "addCardCopiesIn";
             this.addCardCopiesIn.Size = new System.Drawing.Size(20, 20);
             this.addCardCopiesIn.TabIndex = 12;
@@ -617,7 +617,7 @@ namespace DigitalCardBinder.Mk3
             this.addCardPageText.BackColor = System.Drawing.Color.White;
             this.addCardPageText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCardPageText.Location = new System.Drawing.Point(110, 106);
-            this.addCardPageText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCardPageText.Margin = new System.Windows.Forms.Padding(2);
             this.addCardPageText.Name = "addCardPageText";
             this.addCardPageText.Size = new System.Drawing.Size(31, 20);
             this.addCardPageText.TabIndex = 10;
@@ -638,7 +638,7 @@ namespace DigitalCardBinder.Mk3
             this.addCardSlotText.BackColor = System.Drawing.Color.White;
             this.addCardSlotText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCardSlotText.Location = new System.Drawing.Point(37, 106);
-            this.addCardSlotText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCardSlotText.Margin = new System.Windows.Forms.Padding(2);
             this.addCardSlotText.Name = "addCardSlotText";
             this.addCardSlotText.Size = new System.Drawing.Size(28, 20);
             this.addCardSlotText.TabIndex = 8;
@@ -659,7 +659,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.addCardPicIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.addCardPicIn.Location = new System.Drawing.Point(85, 72);
-            this.addCardPicIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCardPicIn.Margin = new System.Windows.Forms.Padding(2);
             this.addCardPicIn.Name = "addCardPicIn";
             this.addCardPicIn.Size = new System.Drawing.Size(131, 23);
             this.addCardPicIn.TabIndex = 6;
@@ -681,7 +681,7 @@ namespace DigitalCardBinder.Mk3
             this.addCardTypeIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addCardTypeIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCardTypeIn.Location = new System.Drawing.Point(85, 45);
-            this.addCardTypeIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCardTypeIn.Margin = new System.Windows.Forms.Padding(2);
             this.addCardTypeIn.Name = "addCardTypeIn";
             this.addCardTypeIn.Size = new System.Drawing.Size(130, 22);
             this.addCardTypeIn.TabIndex = 4;
@@ -714,7 +714,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.addCardNameIn.Font = new System.Drawing.Font("Myriad Pro Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCardNameIn.Location = new System.Drawing.Point(85, 16);
-            this.addCardNameIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCardNameIn.Margin = new System.Windows.Forms.Padding(2);
             this.addCardNameIn.Name = "addCardNameIn";
             this.addCardNameIn.Size = new System.Drawing.Size(131, 23);
             this.addCardNameIn.TabIndex = 1;
@@ -722,7 +722,7 @@ namespace DigitalCardBinder.Mk3
             // addCardButton
             // 
             this.addCardButton.Location = new System.Drawing.Point(10, 134);
-            this.addCardButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCardButton.Margin = new System.Windows.Forms.Padding(2);
             this.addCardButton.Name = "addCardButton";
             this.addCardButton.Size = new System.Drawing.Size(203, 93);
             this.addCardButton.TabIndex = 0;
@@ -737,7 +737,7 @@ namespace DigitalCardBinder.Mk3
             this.currentType.IntegralHeight = false;
             this.currentType.ItemHeight = 23;
             this.currentType.Location = new System.Drawing.Point(17, 67);
-            this.currentType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.currentType.Margin = new System.Windows.Forms.Padding(2);
             this.currentType.Name = "currentType";
             this.currentType.Size = new System.Drawing.Size(170, 29);
             this.currentType.TabIndex = 30;
@@ -808,7 +808,7 @@ namespace DigitalCardBinder.Mk3
             this.ControlPanelCollection.Controls.Add(this.panelDE);
             this.ControlPanelCollection.Controls.Add(this.showSearchPanel);
             this.ControlPanelCollection.Location = new System.Drawing.Point(523, -2);
-            this.ControlPanelCollection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ControlPanelCollection.Margin = new System.Windows.Forms.Padding(2);
             this.ControlPanelCollection.Name = "ControlPanelCollection";
             this.ControlPanelCollection.Size = new System.Drawing.Size(232, 572);
             this.ControlPanelCollection.TabIndex = 18;
@@ -819,7 +819,7 @@ namespace DigitalCardBinder.Mk3
             this.AButton.CustomBackground = true;
             this.AButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.AButton.Location = new System.Drawing.Point(0, 9);
-            this.AButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AButton.Margin = new System.Windows.Forms.Padding(2);
             this.AButton.Name = "AButton";
             this.AButton.Size = new System.Drawing.Size(232, 56);
             this.AButton.TabIndex = 7;
@@ -830,7 +830,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.panelDA.Controls.Add(this.panelA);
             this.panelDA.Location = new System.Drawing.Point(0, 9);
-            this.panelDA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDA.Margin = new System.Windows.Forms.Padding(2);
             this.panelDA.Name = "panelDA";
             this.panelDA.Size = new System.Drawing.Size(232, 299);
             this.panelDA.TabIndex = 7;
@@ -840,7 +840,7 @@ namespace DigitalCardBinder.Mk3
             this.BButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.BButton.CustomBackground = true;
             this.BButton.Location = new System.Drawing.Point(0, 76);
-            this.BButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BButton.Margin = new System.Windows.Forms.Padding(2);
             this.BButton.Name = "BButton";
             this.BButton.Size = new System.Drawing.Size(232, 56);
             this.BButton.TabIndex = 7;
@@ -851,7 +851,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.panelDB.Controls.Add(this.panelB);
             this.panelDB.Location = new System.Drawing.Point(0, 76);
-            this.panelDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDB.Margin = new System.Windows.Forms.Padding(2);
             this.panelDB.Name = "panelDB";
             this.panelDB.Size = new System.Drawing.Size(232, 54);
             this.panelDB.TabIndex = 8;
@@ -863,9 +863,9 @@ namespace DigitalCardBinder.Mk3
             this.panelB.Controls.Add(this.label18);
             this.panelB.Controls.Add(this.addPageButton);
             this.panelB.Location = new System.Drawing.Point(4, 59);
-            this.panelB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelB.Margin = new System.Windows.Forms.Padding(2);
             this.panelB.Name = "panelB";
-            this.panelB.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelB.Padding = new System.Windows.Forms.Padding(2);
             this.panelB.Size = new System.Drawing.Size(224, 147);
             this.panelB.TabIndex = 8;
             this.panelB.TabStop = false;
@@ -876,7 +876,7 @@ namespace DigitalCardBinder.Mk3
             this.addPageCB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addPageCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPageCB.Location = new System.Drawing.Point(84, 12);
-            this.addPageCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addPageCB.Margin = new System.Windows.Forms.Padding(2);
             this.addPageCB.Name = "addPageCB";
             this.addPageCB.Size = new System.Drawing.Size(130, 20);
             this.addPageCB.TabIndex = 4;
@@ -896,7 +896,7 @@ namespace DigitalCardBinder.Mk3
             // addPageButton
             // 
             this.addPageButton.Location = new System.Drawing.Point(10, 45);
-            this.addPageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addPageButton.Margin = new System.Windows.Forms.Padding(2);
             this.addPageButton.Name = "addPageButton";
             this.addPageButton.Size = new System.Drawing.Size(203, 93);
             this.addPageButton.TabIndex = 0;
@@ -908,7 +908,7 @@ namespace DigitalCardBinder.Mk3
             this.CButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.CButton.CustomBackground = true;
             this.CButton.Location = new System.Drawing.Point(0, 142);
-            this.CButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CButton.Margin = new System.Windows.Forms.Padding(2);
             this.CButton.Name = "CButton";
             this.CButton.Size = new System.Drawing.Size(232, 56);
             this.CButton.TabIndex = 7;
@@ -919,7 +919,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.panelDC.Controls.Add(this.panelC);
             this.panelDC.Location = new System.Drawing.Point(0, 142);
-            this.panelDC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDC.Margin = new System.Windows.Forms.Padding(2);
             this.panelDC.Name = "panelDC";
             this.panelDC.Size = new System.Drawing.Size(232, 54);
             this.panelDC.TabIndex = 9;
@@ -934,9 +934,9 @@ namespace DigitalCardBinder.Mk3
             this.panelC.Controls.Add(this.searchCardName);
             this.panelC.Controls.Add(this.searchButton);
             this.panelC.Location = new System.Drawing.Point(4, 60);
-            this.panelC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelC.Margin = new System.Windows.Forms.Padding(2);
             this.panelC.Name = "panelC";
-            this.panelC.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelC.Padding = new System.Windows.Forms.Padding(2);
             this.panelC.Size = new System.Drawing.Size(224, 142);
             this.panelC.TabIndex = 8;
             this.panelC.TabStop = false;
@@ -945,7 +945,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.CheckAll.AutoSize = true;
             this.CheckAll.Location = new System.Drawing.Point(151, 46);
-            this.CheckAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckAll.Margin = new System.Windows.Forms.Padding(2);
             this.CheckAll.Name = "CheckAll";
             this.CheckAll.Size = new System.Drawing.Size(71, 17);
             this.CheckAll.TabIndex = 5;
@@ -958,7 +958,7 @@ namespace DigitalCardBinder.Mk3
             this.searchCardCB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchCardCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchCardCB.Location = new System.Drawing.Point(66, 45);
-            this.searchCardCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchCardCB.Margin = new System.Windows.Forms.Padding(2);
             this.searchCardCB.Name = "searchCardCB";
             this.searchCardCB.Size = new System.Drawing.Size(81, 20);
             this.searchCardCB.TabIndex = 4;
@@ -988,7 +988,7 @@ namespace DigitalCardBinder.Mk3
             // searchCardName
             // 
             this.searchCardName.Location = new System.Drawing.Point(52, 16);
-            this.searchCardName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchCardName.Margin = new System.Windows.Forms.Padding(2);
             this.searchCardName.Name = "searchCardName";
             this.searchCardName.Size = new System.Drawing.Size(163, 20);
             this.searchCardName.TabIndex = 1;
@@ -996,7 +996,7 @@ namespace DigitalCardBinder.Mk3
             // searchButton
             // 
             this.searchButton.Location = new System.Drawing.Point(10, 75);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(203, 56);
             this.searchButton.TabIndex = 0;
@@ -1008,7 +1008,7 @@ namespace DigitalCardBinder.Mk3
             this.EButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.EButton.CustomBackground = true;
             this.EButton.Location = new System.Drawing.Point(0, 209);
-            this.EButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EButton.Margin = new System.Windows.Forms.Padding(2);
             this.EButton.Name = "EButton";
             this.EButton.Size = new System.Drawing.Size(232, 56);
             this.EButton.TabIndex = 16;
@@ -1019,7 +1019,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.panelDE.Controls.Add(this.panelE);
             this.panelDE.Location = new System.Drawing.Point(0, 209);
-            this.panelDE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDE.Margin = new System.Windows.Forms.Padding(2);
             this.panelDE.Name = "panelDE";
             this.panelDE.Size = new System.Drawing.Size(232, 58);
             this.panelDE.TabIndex = 14;
@@ -1031,9 +1031,9 @@ namespace DigitalCardBinder.Mk3
             this.panelE.Controls.Add(this.label12);
             this.panelE.Controls.Add(this.addTypeText);
             this.panelE.Location = new System.Drawing.Point(3, 60);
-            this.panelE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelE.Margin = new System.Windows.Forms.Padding(2);
             this.panelE.Name = "panelE";
-            this.panelE.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelE.Padding = new System.Windows.Forms.Padding(2);
             this.panelE.Size = new System.Drawing.Size(225, 39);
             this.panelE.TabIndex = 0;
             this.panelE.TabStop = false;
@@ -1041,7 +1041,7 @@ namespace DigitalCardBinder.Mk3
             // addTypeFolder
             // 
             this.addTypeFolder.Location = new System.Drawing.Point(161, 16);
-            this.addTypeFolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addTypeFolder.Margin = new System.Windows.Forms.Padding(2);
             this.addTypeFolder.Name = "addTypeFolder";
             this.addTypeFolder.Size = new System.Drawing.Size(59, 19);
             this.addTypeFolder.TabIndex = 2;
@@ -1062,7 +1062,7 @@ namespace DigitalCardBinder.Mk3
             // addTypeText
             // 
             this.addTypeText.Location = new System.Drawing.Point(70, 16);
-            this.addTypeText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addTypeText.Margin = new System.Windows.Forms.Padding(2);
             this.addTypeText.Name = "addTypeText";
             this.addTypeText.Size = new System.Drawing.Size(78, 20);
             this.addTypeText.TabIndex = 0;
@@ -1071,7 +1071,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.showSearchPanel.Controls.Add(this.SearchCardView);
             this.showSearchPanel.Location = new System.Drawing.Point(0, 269);
-            this.showSearchPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.showSearchPanel.Margin = new System.Windows.Forms.Padding(2);
             this.showSearchPanel.Name = "showSearchPanel";
             this.showSearchPanel.Size = new System.Drawing.Size(232, 298);
             this.showSearchPanel.TabIndex = 12;
@@ -1082,7 +1082,7 @@ namespace DigitalCardBinder.Mk3
             this.SearchCardView.FullRowSelect = true;
             this.SearchCardView.GridLines = true;
             this.SearchCardView.Location = new System.Drawing.Point(4, 2);
-            this.SearchCardView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchCardView.Margin = new System.Windows.Forms.Padding(2);
             this.SearchCardView.MultiSelect = false;
             this.SearchCardView.Name = "SearchCardView";
             this.SearchCardView.Size = new System.Drawing.Size(225, 296);
@@ -1125,7 +1125,7 @@ namespace DigitalCardBinder.Mk3
             this.cardCollectionView.Controls.Add(this.cc3);
             this.cardCollectionView.Controls.Add(this.cc2);
             this.cardCollectionView.Location = new System.Drawing.Point(17, 110);
-            this.cardCollectionView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardCollectionView.Margin = new System.Windows.Forms.Padding(2);
             this.cardCollectionView.Name = "cardCollectionView";
             this.cardCollectionView.Size = new System.Drawing.Size(490, 444);
             this.cardCollectionView.TabIndex = 19;
@@ -1136,7 +1136,7 @@ namespace DigitalCardBinder.Mk3
             this.changePictureIcon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.changePictureIcon.Image = global::DigitalCardBinder.Mk3.Properties.Resources.changePicture;
             this.changePictureIcon.Location = new System.Drawing.Point(332, 399);
-            this.changePictureIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.changePictureIcon.Margin = new System.Windows.Forms.Padding(2);
             this.changePictureIcon.Name = "changePictureIcon";
             this.changePictureIcon.Size = new System.Drawing.Size(34, 37);
             this.changePictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1148,7 +1148,7 @@ namespace DigitalCardBinder.Mk3
             this.trashIcon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.trashIcon.Image = global::DigitalCardBinder.Mk3.Properties.Resources.trashIcon;
             this.trashIcon.Location = new System.Drawing.Point(383, 399);
-            this.trashIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trashIcon.Margin = new System.Windows.Forms.Padding(2);
             this.trashIcon.Name = "trashIcon";
             this.trashIcon.Size = new System.Drawing.Size(34, 37);
             this.trashIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1164,7 +1164,7 @@ namespace DigitalCardBinder.Mk3
             this.PageNavPanel.Controls.Add(this.MAX_PAGE_LABEL);
             this.PageNavPanel.Controls.Add(this.t_SLASH);
             this.PageNavPanel.Location = new System.Drawing.Point(62, 399);
-            this.PageNavPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PageNavPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PageNavPanel.Name = "PageNavPanel";
             this.PageNavPanel.Size = new System.Drawing.Size(199, 37);
             this.PageNavPanel.TabIndex = 16;
@@ -1172,7 +1172,7 @@ namespace DigitalCardBinder.Mk3
             // GOTO_TEXTBOX
             // 
             this.GOTO_TEXTBOX.Location = new System.Drawing.Point(64, 11);
-            this.GOTO_TEXTBOX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GOTO_TEXTBOX.Margin = new System.Windows.Forms.Padding(2);
             this.GOTO_TEXTBOX.Name = "GOTO_TEXTBOX";
             this.GOTO_TEXTBOX.Size = new System.Drawing.Size(25, 19);
             this.GOTO_TEXTBOX.TabIndex = 15;
@@ -1182,7 +1182,7 @@ namespace DigitalCardBinder.Mk3
             // GOTO_BUTTON
             // 
             this.GOTO_BUTTON.Location = new System.Drawing.Point(9, 9);
-            this.GOTO_BUTTON.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GOTO_BUTTON.Margin = new System.Windows.Forms.Padding(2);
             this.GOTO_BUTTON.Name = "GOTO_BUTTON";
             this.GOTO_BUTTON.Size = new System.Drawing.Size(41, 20);
             this.GOTO_BUTTON.TabIndex = 14;
@@ -1219,7 +1219,7 @@ namespace DigitalCardBinder.Mk3
             // 
             this.seeCard.BackColor = System.Drawing.Color.Transparent;
             this.seeCard.Location = new System.Drawing.Point(794, 124);
-            this.seeCard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.seeCard.Margin = new System.Windows.Forms.Padding(2);
             this.seeCard.Name = "seeCard";
             this.seeCard.Size = new System.Drawing.Size(267, 396);
             this.seeCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1231,9 +1231,9 @@ namespace DigitalCardBinder.Mk3
             // 
             this.cardPreview.BackColor = System.Drawing.Color.Gray;
             this.cardPreview.Location = new System.Drawing.Point(771, 110);
-            this.cardPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardPreview.Margin = new System.Windows.Forms.Padding(2);
             this.cardPreview.Name = "cardPreview";
-            this.cardPreview.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardPreview.Padding = new System.Windows.Forms.Padding(2);
             this.cardPreview.Size = new System.Drawing.Size(312, 444);
             this.cardPreview.TabIndex = 4;
             this.cardPreview.TabStop = false;
@@ -1247,9 +1247,9 @@ namespace DigitalCardBinder.Mk3
             this.seeCardNameLabel.Location = new System.Drawing.Point(767, 91);
             this.seeCardNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.seeCardNameLabel.Name = "seeCardNameLabel";
-            this.seeCardNameLabel.Size = new System.Drawing.Size(37, 19);
+            this.seeCardNameLabel.Size = new System.Drawing.Size(43, 19);
             this.seeCardNameLabel.TabIndex = 31;
-            this.seeCardNameLabel.Text = "TEST";
+            this.seeCardNameLabel.Text = "TEMP";
             // 
             // Body
             // 
@@ -1265,7 +1265,7 @@ namespace DigitalCardBinder.Mk3
             this.Controls.Add(this.seeCardNameLabel);
             this.ForeColor = System.Drawing.Color.Black;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1100, 569);
             this.MinimumSize = new System.Drawing.Size(1100, 569);
