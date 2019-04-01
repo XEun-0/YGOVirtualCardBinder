@@ -76,6 +76,8 @@ namespace DigitalCardBinder.Mk3
             //DropPanel things
             hideHeight = panelDA.Height;
             panelDA.Height = AButton.Height + 1;
+
+            Console.WriteLine(this.Controls.Count);
         }
 
         private void AddCardButton_Click(object sender, EventArgs e)
