@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2043
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalCardBinder.Mk5", "DigitalCardBinder.Mk3\DigitalCardBinder.Mk5.csproj", "{91CF2DC9-F401-41BC-8F4D-D7D9A72F1A75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardElementClassLibrary", "..\ce.lib\CardElementClassLibrary\CardElementClassLibrary.csproj", "{4BA0CD50-5AF1-47BE-9F04-8971E244A858}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{91CF2DC9-F401-41BC-8F4D-D7D9A72F1A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91CF2DC9-F401-41BC-8F4D-D7D9A72F1A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91CF2DC9-F401-41BC-8F4D-D7D9A72F1A75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BA0CD50-5AF1-47BE-9F04-8971E244A858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA0CD50-5AF1-47BE-9F04-8971E244A858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA0CD50-5AF1-47BE-9F04-8971E244A858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA0CD50-5AF1-47BE-9F04-8971E244A858}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,7 @@
 ﻿using DigitalCardBinder.Mk3.ComponentHandlers;
 using DigitalCardBinder.Mk3.Components;
 using DigitalCardBinder.Mk3.DatabaseHandlers;
+using CardElementClassLibrary;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -24,9 +25,9 @@ namespace DigitalCardBinder.Mk3
     public partial class Body : MetroForm
     {
         //Database Handlers
-        static CardDatabaseManagement cdm = new CardDatabaseManagement();
-        static PageDatabaseManagement pdm = new PageDatabaseManagement();
-        static DirectoryDatabaseManagement ddm = new DirectoryDatabaseManagement();
+        static readonly CardDatabaseManagement cdm = new CardDatabaseManagement();
+        static readonly PageDatabaseManagement pdm = new PageDatabaseManagement();
+        static readonly DirectoryDatabaseManagement ddm = new DirectoryDatabaseManagement();
 
         int MouseX;
         int MouseY;
@@ -35,7 +36,6 @@ namespace DigitalCardBinder.Mk3
         Boolean mouseInCCView = false;
         Boolean mouseInLP = false;
         Boolean mouseInRP = false;
-        //Boolean GhostCardInitCanceled = false;
         PanelHandler panelHandler;
 
         //Utility Variables
@@ -60,8 +60,7 @@ namespace DigitalCardBinder.Mk3
             InitializeComponent();
             ActivateCards();
             BindList(currentType, ddm.RefreshCombobox());
-            //currentType.SelectedIndex = 0;
-            
+
             PopulateDisplay();
             Console.WriteLine("BREJLFSAJFDSJ;LF");
             addCardCopiesIn.Text = "" + 1;
@@ -77,9 +76,17 @@ namespace DigitalCardBinder.Mk3
             hideHeight = panelDA.Height;
             panelDA.Height = AButton.Height + 1;
 
-            Console.WriteLine(this.Controls.Count);
+            //Console.WriteLine(this.Controls.Count);
+
+            MonsterElement ce = new MonsterElement();
+            MonsterElement ce2 = new MonsterElement("ai6", "hi", "hi", "hi", "hi", "hi", 1);
+            MonsterElement ce3 = new MonsterElement("ai67", "hi", "hi", "hi", "hi", "hi", 1);
+
+            Console.WriteLine(ce3.GetName() + " < " + ce2.GetName() + " : " + (ce3 < ce2));
+            Console.WriteLine( "ai6".CompareTo("hi3"));
         }
 
+        //Method for card area click response
         private void AddCardButton_Click(object sender, EventArgs e)
         {
             

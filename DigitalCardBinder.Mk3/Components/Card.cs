@@ -35,13 +35,13 @@ namespace DigitalCardBinder.Mk3.Components
             slot = islot;
             picture = ipicture;
             copies = icopies;
-            pictureLink = ipicLink;
+            pictureLink = ipicLink;        
             count = 7;
-        }
-
+        }             
+                                   
         //Placeholder Card for switching
         public Card(string islot)
-        {
+        {   
             count = 0;
             slot = islot;
         }
