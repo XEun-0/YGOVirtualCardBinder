@@ -40,7 +40,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CardElementClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>bin\Release\CardElementClassLibrary.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ce.lib\CardElementClassLibrary\bin\Release\CardElementClassLibrary.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>

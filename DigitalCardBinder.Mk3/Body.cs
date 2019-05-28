@@ -81,9 +81,12 @@ namespace DigitalCardBinder.Mk3
             MonsterElement ce = new MonsterElement();
             MonsterElement ce2 = new MonsterElement("ai6", "hi", "hi", "hi", "hi", "hi", 1);
             MonsterElement ce3 = new MonsterElement("ai67", "hi", "hi", "hi", "hi", "hi", 1);
+            MonsterElement ce4 = (MonsterElement)ce3.GetCopy();
 
             Console.WriteLine(ce3.GetName() + " < " + ce2.GetName() + " : " + (ce3 < ce2));
             Console.WriteLine( "ai6".CompareTo("hi3"));
+            Console.WriteLine(" ce4 : " + ce4.GetName());
+
         }
 
         //Method for card area click response
