@@ -12,55 +12,16 @@ using CardElementClassLibrary;
 namespace DigitalCardBinder.Mk3.DatabaseHandlers
 {
     //xml file checking stuff
-    static class CardDatabaseManagement
+    static class CDM
     {
-        //private static Dictionary<int, string> dict = new Dictionary<int, string>();
         private static string nname;
 
-        public static Card GetCard(string slot, int page)
+        //GetCard method for slot and current page
+        public static CardElement GetCard(string slot, int page)
         {
-            return new Card(1, slot, "" + page);
-        }
+            
 
-        //Incorporating CardElements
-        public static CardElement GetCard(string name, string type, string slot, string page)
-        {
-            try
-            {
-                string nname = "";
-                string pic = "";
-                string copies = "";
-                XmlDocument xd = new XmlDocument();
-                FileStream file = new FileStream("database/" + type + "/page" + page + ".xml", FileMode.Open);
-                xd.Load(file);
-                XmlNodeList list = xd.GetElementsByTagName("Card");
-
-                for (int i = 0; i < list.Count; i++)
-                {
-                    XmlElement c1 = (XmlElement)xd.GetElementsByTagName("Slot")[i];
-                    XmlElement c2 = (XmlElement)xd.GetElementsByTagName("Card")[i];
-                    XmlElement c3 = (XmlElement)xd.GetElementsByTagName("Picture")[i];
-                    XmlElement c4 = (XmlElement)xd.GetElementsByTagName("Copies")[i];
-                    //Console.WriteLine(slot + " " + c3.InnerText);
-                    if ((c1.InnerText).Equals(slot))
-                    {
-                        nname = c2.GetAttribute("Name");
-                        pic = c3.InnerText;
-                        copies = "" + c4.InnerText;
-                        file.Close();
-                        //return new Card(type, page, slot, name, Simplify(name) + ".jpeg", copies, pic);
-                        return null;
-                    }
-                }
-                file.Close();
-                return null;
-            }
-            catch (IOException e)
-            {
-                e.ToString();
-                //Console.WriteLine("BAKKAKAKAKAKA");
-                return null;
-            }
+            return null;
         }
 
         public static FileInfo[] GetDatabasePages(string type)
@@ -127,7 +88,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
                 string copies = "";
                 XmlDocument xd = new XmlDocument();
                 FileInfo[] fi = GetDatabasePages(type);
-                foreach(FileInfo ff in fi)
+                foreach (FileInfo ff in fi)
                 {
                     FileStream file = new FileStream("database/" + type + "/" + ff.Name, FileMode.Open);
                     xd.Load(file);
@@ -188,7 +149,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
 
                         string page = f.Name.Remove(f.Name.IndexOf(".xml"));
                         page = page.Substring(page.IndexOf("page") + 4);
-                        if(Simplify(c2.GetAttribute("Name")).Contains(Simplify(iname)))
+                        if (Simplify(c2.GetAttribute("Name")).Contains(Simplify(iname)))
                         {
                             Card temp = new Card(
                                 type,
@@ -302,7 +263,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
 
         public static void RemoveCard(Card c, string type)
         {
-            if(c.Count != 1)
+            if (c.Count != 1)
             {
                 XmlDocument xd = new XmlDocument();
 
@@ -324,7 +285,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
                 }
                 file.Close();
                 xd.Save("database/" + type + "/page" + c.Page + ".xml");
-            }   
+            }
         }
 
         public static Boolean CardExists(Card c)
@@ -385,7 +346,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
 
         public static void SwapCard(Card c1, Card c2)
         {
-            if(!c1.Equals(c2))
+            if (!c1.Equals(c2))
             {
                 //Console.WriteLine(c1.Slot + ", " + c1.Count + ", Page: " + c1.Page);
                 //Console.WriteLine(c2.Slot + ", " + c2.Count + ", Page: " + c2.Page);
@@ -404,7 +365,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
                 //Console.WriteLine("SWAP: c1 " + c1.Name + " : " + c1.Slot + ", c2 " + c2.Name + " : " + c2.Slot);
                 AddCard(c1);
                 AddCard(c2);
-            } 
+            }
         }
 
         public static string Simplify(string s)
@@ -414,7 +375,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             name = name.Replace("/", " ");
 
             //Console.WriteLine("BE" + name.Substring(0, 1) + "END");
-            if(name.Substring(0,1).Equals(" "))
+            if (name.Substring(0, 1).Equals(" "))
             {
                 name = name.Substring(1);
             }

@@ -8,9 +8,9 @@ using System.Xml;
 
 namespace DigitalCardBinder.Mk3.DatabaseHandlers
 {
-    class DirectoryDatabaseManagement
+    static class DirectoryDatabaseManagement
     {
-        public List<string> RefreshCombobox()
+        public static List<string> RefreshCombobox()
         {
             List<string> l = new List<string>();
 
@@ -30,7 +30,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             return l;
         }
 
-        public void AddPage(string page)
+        public static void AddPage(string page)
         {
             XmlTextWriter xtw;
             //Console.WriteLine(page);
@@ -41,7 +41,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             xtw.Close();
         }
 
-        public void AddCardType(string name)
+        public static void AddCardType(string name)
         {
             Boolean b = false;
             XmlDocument xd = new XmlDocument();
@@ -69,7 +69,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             RefreshDatabaseDirectory();
         }
 
-        public void RefreshDatabaseDirectory()
+        public static void RefreshDatabaseDirectory()
         {
             DirectoryInfo d = new DirectoryInfo("database/");
             DirectoryInfo[] f = d.GetDirectories();

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DigitalCardBinder.Mk3.DatabaseHandlers
 {
-    class PageDatabaseManagement
+    static class PageDatabaseManagement
     {
-        public int GetPageNum(string path)
+        public static int GetPageNum(string path)
         {
             DirectoryInfo d = new DirectoryInfo("database/" + path + "/");
             FileInfo[] f = d.GetFiles("*.xml");
