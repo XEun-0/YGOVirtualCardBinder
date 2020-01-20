@@ -596,7 +596,7 @@ namespace DigitalCardBinder.Mk3
             // 
             // addCardCopiesIn
             // 
-            this.addCardCopiesIn.Location = new System.Drawing.Point(187, 106);
+            this.addCardCopiesIn.Location = new System.Drawing.Point(193, 106);
             this.addCardCopiesIn.Margin = new System.Windows.Forms.Padding(2);
             this.addCardCopiesIn.Name = "addCardCopiesIn";
             this.addCardCopiesIn.Size = new System.Drawing.Size(20, 20);
@@ -661,7 +661,7 @@ namespace DigitalCardBinder.Mk3
             this.addCardPicIn.Location = new System.Drawing.Point(85, 72);
             this.addCardPicIn.Margin = new System.Windows.Forms.Padding(2);
             this.addCardPicIn.Name = "addCardPicIn";
-            this.addCardPicIn.Size = new System.Drawing.Size(131, 23);
+            this.addCardPicIn.Size = new System.Drawing.Size(128, 23);
             this.addCardPicIn.TabIndex = 6;
             // 
             // addCardPicLabel
@@ -683,7 +683,7 @@ namespace DigitalCardBinder.Mk3
             this.addCardTypeIn.Location = new System.Drawing.Point(85, 45);
             this.addCardTypeIn.Margin = new System.Windows.Forms.Padding(2);
             this.addCardTypeIn.Name = "addCardTypeIn";
-            this.addCardTypeIn.Size = new System.Drawing.Size(130, 22);
+            this.addCardTypeIn.Size = new System.Drawing.Size(128, 22);
             this.addCardTypeIn.TabIndex = 4;
             this.addCardTypeIn.Text = "temp";
             this.addCardTypeIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -716,7 +716,7 @@ namespace DigitalCardBinder.Mk3
             this.addCardNameIn.Location = new System.Drawing.Point(85, 16);
             this.addCardNameIn.Margin = new System.Windows.Forms.Padding(2);
             this.addCardNameIn.Name = "addCardNameIn";
-            this.addCardNameIn.Size = new System.Drawing.Size(131, 23);
+            this.addCardNameIn.Size = new System.Drawing.Size(128, 23);
             this.addCardNameIn.TabIndex = 1;
             // 
             // addCardButton
@@ -832,7 +832,7 @@ namespace DigitalCardBinder.Mk3
             this.panelDA.Location = new System.Drawing.Point(0, 9);
             this.panelDA.Margin = new System.Windows.Forms.Padding(2);
             this.panelDA.Name = "panelDA";
-            this.panelDA.Size = new System.Drawing.Size(232, 56);
+            this.panelDA.Size = new System.Drawing.Size(232, 299);
             this.panelDA.TabIndex = 7;
             // 
             // BButton
@@ -1081,6 +1081,7 @@ namespace DigitalCardBinder.Mk3
             this.SearchCardView.BackColor = System.Drawing.Color.PapayaWhip;
             this.SearchCardView.FullRowSelect = true;
             this.SearchCardView.GridLines = true;
+            this.SearchCardView.HideSelection = false;
             this.SearchCardView.Location = new System.Drawing.Point(4, 2);
             this.SearchCardView.Margin = new System.Windows.Forms.Padding(2);
             this.SearchCardView.MultiSelect = false;
