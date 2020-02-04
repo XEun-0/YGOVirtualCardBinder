@@ -22,6 +22,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             return new Card(1, slot, "" + page);
         }
 
+        #region Testing CardElements
         //Incorporating CardElements
         public static CardElement GetCard(string name, string type, string slot, string page)
         {
@@ -62,6 +63,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
                 return null;
             }
         }
+        #endregion
 
         public static FileInfo[] GetDatabasePages(string type)
         {
@@ -383,9 +385,12 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             return false;
         }
 
-        public static void SwapCard(Card c1, Card c2)
+        public static void SwapCard(ref Card c1, ref Card c2)
         {
-            if(!c1.Equals(c2))
+            //c1.SwapLocInfo(ref c2);
+            //Console.WriteLine(c1.Slot + ", " + c1.Page + " : " + c2.Slot + ", " + c2.Page);
+
+            if (!c1.Equals(c2))
             {
                 //Console.WriteLine(c1.Slot + ", " + c1.Count + ", Page: " + c1.Page);
                 //Console.WriteLine(c2.Slot + ", " + c2.Count + ", Page: " + c2.Page);
@@ -404,7 +409,26 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
                 //Console.WriteLine("SWAP: c1 " + c1.Name + " : " + c1.Slot + ", c2 " + c2.Name + " : " + c2.Slot);
                 AddCard(c1);
                 AddCard(c2);
-            } 
+            }
+
+            //if (!c1.Equals(c2))
+            //{
+            //    RemoveCard(c1, c1.Type);
+            //    RemoveCard(c2, c2.Type);
+            //    var temp = c1;
+            //    var tempSlot = c1.Slot;
+            //    var tempPage = c1.Page;
+            //    c1 = c2;
+            //    c1.Slot = c2.Slot;
+            //    c1.Page = c2.Page;
+                
+            //    c2 = temp;
+            //    c2.Slot = tempSlot;
+            //    c2.Page = tempPage;
+
+            //    AddCard(c1);
+            //    AddCard(c2);
+            //}
         }
 
         public static string Simplify(string s)

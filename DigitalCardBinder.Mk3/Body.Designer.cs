@@ -832,7 +832,7 @@ namespace DigitalCardBinder.Mk3
             this.panelDA.Location = new System.Drawing.Point(0, 9);
             this.panelDA.Margin = new System.Windows.Forms.Padding(2);
             this.panelDA.Name = "panelDA";
-            this.panelDA.Size = new System.Drawing.Size(232, 299);
+            this.panelDA.Size = new System.Drawing.Size(232, 56);
             this.panelDA.TabIndex = 7;
             // 
             // BButton

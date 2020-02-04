@@ -378,7 +378,7 @@ namespace DigitalCardBinder.Mk3
                     Card destinationCard = CardDatabaseManagement.GetCard((string)currentType.SelectedItem, c.Name, currentPage + "");
                     //Console.WriteLine("c1: " + swapCard.Count + ", c2: " + destinationCard.Count);
                     //swap card
-                    CardDatabaseManagement.SwapCard(swapCard, destinationCard);
+                    CardDatabaseManagement.SwapCard(ref swapCard, ref destinationCard);
                     PopulateDisplay();
                     DisposeGhostCard();
                 }               

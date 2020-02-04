@@ -117,5 +117,21 @@ namespace DigitalCardBinder.Mk3.Components
                 return true;
             return false;
         }
+
+        #region Testing methods for 'Card' class.
+
+        public void SwapLocInfo(ref Card dest)
+        {
+            var tempSlot = dest.Slot;
+            var tempPage = dest.Page;
+
+            dest.Slot = this.Slot;
+            dest.Page = this.Page;
+
+            this.Slot = tempSlot;
+            this.Page = tempPage;
+        }
+
+        #endregion
     }
 }
