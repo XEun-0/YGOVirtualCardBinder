@@ -20,6 +20,7 @@ namespace DigitalCardBinder.Mk3.Components
 
         private int count;
 
+        #region Getters and Setters
         public Card(int i, string islot, string ipage)
         {
             count = i;
@@ -117,6 +118,8 @@ namespace DigitalCardBinder.Mk3.Components
                 return true;
             return false;
         }
+
+        #endregion
 
         #region Testing methods for 'Card' class.
 

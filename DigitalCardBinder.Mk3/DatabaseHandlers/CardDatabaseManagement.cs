@@ -284,7 +284,6 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             }
         }
 
-
         private static Boolean PictureExist(string type, string picture)
         {
             DirectoryInfo d = new DirectoryInfo("database/" + type + "/images/");
