@@ -81,7 +81,6 @@
     <Compile Include="ComponentHandlers\PanelHandler.cs" />
     <Compile Include="Components\Card.cs" />
     <Compile Include="DatabaseHandlers\CardDatabaseManagement.cs" />
-    <Compile Include="DatabaseHandlers\CDM.cs" />
     <Compile Include="DatabaseHandlers\DirectoryDatabaseManagement.cs" />
     <Compile Include="DatabaseHandlers\PageDatabaseManagement.cs" />
     <Compile Include="DatabaseHandlers\XMLDatabaseHandler.cs" />

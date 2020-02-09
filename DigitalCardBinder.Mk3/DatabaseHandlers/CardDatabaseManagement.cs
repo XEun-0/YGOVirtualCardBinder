@@ -217,6 +217,7 @@ namespace DigitalCardBinder.Mk3.DatabaseHandlers
             }
         }
 
+        //testing Comment for branches
         public static void AddCard(Card card)
         {
             bool cardExist = CardExists(card);
