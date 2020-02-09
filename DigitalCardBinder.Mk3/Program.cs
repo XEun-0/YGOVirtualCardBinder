@@ -1,6 +1,8 @@
-﻿using System;
+﻿using DigitalCardBinder.Mk3.Components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,7 +18,16 @@ namespace DigitalCardBinder.Mk3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Body());
+
+            Thread mythread;
+            mythread = new Thread(new ThreadStart(ThreadLoop));
+            mythread.Start();
+            Application.Run(new Body(mythread));
+        }
+
+        public static void ThreadLoop()
+        {
+            Application.Run(new SplashScreen());
         }
     }
 }

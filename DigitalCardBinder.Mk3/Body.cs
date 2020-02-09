@@ -49,7 +49,7 @@ namespace DigitalCardBinder.Mk3
         int hideHeight;
         Panel dropped;
 
-        public Body()
+        public Body(Thread sst)
         {
             panelHandler = new PanelHandler();
             InitializeComponent();
@@ -79,6 +79,9 @@ namespace DigitalCardBinder.Mk3
             Console.WriteLine(ce3.GetName() + " < " + ce2.GetName() + " : " + (ce3 < ce2));
             Console.WriteLine( "ai6".CompareTo("hi3"));
             Console.WriteLine(" ce4 : " + ce4.GetName());
+            
+            //Threading ending for splash screen
+            sst.Abort();
         }
 
         //Method for card area click response
