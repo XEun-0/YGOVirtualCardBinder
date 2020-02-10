@@ -49,7 +49,7 @@ namespace DigitalCardBinder.Mk3
         int hideHeight;
         Panel dropped;
 
-        public Body(Thread sst)
+        public Body()
         {
             panelHandler = new PanelHandler();
             InitializeComponent();
@@ -71,17 +71,16 @@ namespace DigitalCardBinder.Mk3
 
             //Console.WriteLine(this.Controls.Count);
 
-            MonsterElement ce = new MonsterElement();
-            MonsterElement ce2 = new MonsterElement("ai6", "hi", "hi", "hi", "hi", "hi", 1);
-            MonsterElement ce3 = new MonsterElement("ai67", "hi", "hi", "hi", "hi", "hi", 1);
-            MonsterElement ce4 = (MonsterElement)ce3.GetCopy();
+            //MonsterElement ce = new MonsterElement();
+            //MonsterElement ce2 = new MonsterElement("ai6", "hi", "hi", "hi", "hi", "hi", 1);
+            //MonsterElement ce3 = new MonsterElement("ai67", "hi", "hi", "hi", "hi", "hi", 1);
+            //MonsterElement ce4 = (MonsterElement)ce3.GetCopy();
 
-            Console.WriteLine(ce3.GetName() + " < " + ce2.GetName() + " : " + (ce3 < ce2));
-            Console.WriteLine( "ai6".CompareTo("hi3"));
-            Console.WriteLine(" ce4 : " + ce4.GetName());
+            //Console.WriteLine(ce3.GetName() + " < " + ce2.GetName() + " : " + (ce3 < ce2));
+            //Console.WriteLine( "ai6".CompareTo("hi3"));
+            //Console.WriteLine(" ce4 : " + ce4.GetName());
             
             //Threading ending for splash screen
-            sst.Abort();
         }
 
         //Method for card area click response

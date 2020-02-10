@@ -13,21 +13,33 @@ namespace DigitalCardBinder.Mk3
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+
+        static Form ss;
+        static Form main;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Thread mythread;
-            mythread = new Thread(new ThreadStart(ThreadLoop));
-            mythread.Start();
-            Application.Run(new Body(mythread));
+            ss = new SplashScreen();
+            var splashThread = new Thread(new ThreadStart(
+            () => Application.Run(ss)));
+            splashThread.SetApartmentState(ApartmentState.STA);
+            splashThread.Start();
+
+            main = new Body();
+            main.Load += Load_Completed;
+            Application.Run(main);
         }
 
-        public static void ThreadLoop()
+        public static void Load_Completed(object sender, EventArgs e)
         {
-            Application.Run(new SplashScreen());
+            if (ss != null && !ss.Disposing && !ss.IsDisposed)
+                ss.Invoke(new Action(() => ss.Close()));
+            main.TopMost = true;
+            main.Activate();
+            main.TopMost = false;
         }
     }
 }
