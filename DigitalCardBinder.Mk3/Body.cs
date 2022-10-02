@@ -560,7 +560,6 @@ namespace DigitalCardBinder.Mk3
             {
                 if (gb != dropped)
                 {
-
                     //insert method for assigning accept button
                     AssignAcceptButton(b.Name.Substring(0, 1));
                     int maxheight = hideHeight;
@@ -685,7 +684,6 @@ namespace DigitalCardBinder.Mk3
         {
             if (SearchCardView.SelectedIndices.Count > 0)
             {
-                //Console.WriteLine();
                 int i = SearchCardView.SelectedIndices[0];
                 //var card = CardDatabaseManagement.GetCard(SearchCardView.SelectedItems[0].Text, (string)SearchCardView.SelectedItems[0].Tag);
 

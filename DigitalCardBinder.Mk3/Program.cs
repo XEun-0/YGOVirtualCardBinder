@@ -24,7 +24,7 @@ namespace DigitalCardBinder.Mk3
 
             ss = new SplashScreen();
             var splashThread = new Thread(new ThreadStart(
-            () => Application.Run(ss)));
+                () => Application.Run(ss)));
             splashThread.SetApartmentState(ApartmentState.STA);
             splashThread.Start();
 
